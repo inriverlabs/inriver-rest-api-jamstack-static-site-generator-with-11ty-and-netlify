@@ -1,0 +1,54 @@
+---
+layout: 'layouts/base.njk'
+title: Product Detail
+pagination:
+    data: products
+    size: 1
+    alias: product
+permalink: "product/{{ product.summary.displayName | slug }}/"
+---
+
+<!-- Product section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{% if product.summary.resourceUrl %} {{ product.summary.resourceUrl }} {% else %} https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg {% endif %}" alt="product.summary.displayDescription" /></div>
+            <div class="col-md-6">
+                <div class="small mb-1">SKU: {{ product.summary.displayName }}-{{ product.summary.id }}</div>
+                <h1 class="display-5 fw-bolder">{{ product.summary.displayDescription }}</h1>
+                <div class="fs-5 mb-5">
+                    <span class="text-decoration-line-through">$YY.YY</span>
+                    <span>$XX.XX</span>
+                </div>
+                {% for field in product.fields %}
+                {% if field.fieldTypeId == "ProductShortDescription" %}
+                <p class="lead">{{ field.value.en }}</p>
+                {% endif %}
+                {% endfor %}
+                <div class="d-flex">
+                    <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <i class="bi-cart-fill me-1"></i>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 gx-4 gx-lg-5 align-items-center">
+            <div class="col">
+                <table class="table table-striped">
+                    <tbody>
+                        {% for field in product.fields %}
+                        {% if field.fieldTypeId != "ProductShortDescription" %}
+                        <tr>
+                            <td>{{ field.fieldTypeDisplayName }}</td><td>{{ field.displayValue }}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+        

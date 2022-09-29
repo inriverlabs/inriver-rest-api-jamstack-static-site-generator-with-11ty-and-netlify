@@ -1,0 +1,29 @@
+{
+  "name": "jamstack-static-site-generator-with-11ty-data-from-inriver-rest-api",
+  "version": "1.0.0",
+  "description": "## Install locally ``` npm install --save-dev @11ty/eleventy npm upgrade ```",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inriverlabs/jamstack-static-site-generator-with-11ty-data-from-inriver-rest-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inriverlabs/jamstack-static-site-generator-with-11ty-data-from-inriver-rest-api/issues"
+  },
+  "homepage": "https://github.com/inriverlabs/jamstack-static-site-generator-with-11ty-data-from-inriver-rest-api#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  },
+  "dependencies": {
+    "@supercharge/promise-pool": "^2.2.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1"
+  }
+}

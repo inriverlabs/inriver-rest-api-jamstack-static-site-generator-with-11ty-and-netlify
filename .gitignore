@@ -1,0 +1,31 @@
+# Ignore installed npm modules
+# eleventy-sample/node_modules/
+!dev/
+
+# Ignore build tool output, e.g. code coverage
+
+# Ignore API documentation
+# eleventy-sample/api-docs/
+*.bak
+*.old
+11ty_commands.txt
+
+# Ignore folders from source code editors
+.vscode
+.idea
+
+# Ignore eleventy output when doing manuell tests
+# eleventy-sample/_site/
+# eleventy-sample/package-lock.json
+
+# Ignore main npm modules
+node_modules/
+
+# Ignore _site, created by 11ty
+_site/
+
+# Ignore dotenv file
+.env
+
+# Ignore dump dir and its content
+# dump/
