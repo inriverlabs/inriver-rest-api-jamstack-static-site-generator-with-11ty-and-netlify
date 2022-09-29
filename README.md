@@ -29,7 +29,7 @@ npx @11ty/eleventy
 
 ## GOAL with this inriver innovation labs project. 
 
-1. Showcase how inriver REST API JSON data can generate static websites super easy and fast. 
+1. Showcase how [inriver PIM](https://www.inriver.com/) REST API data can generate static websites super easy and fast. 
 2. Showcase how GITHUB changes on your templates code can regenerate the JAMSTACK site and atomic deploy to Netlify
 3. Showcase how Netlify can be triggered to fetch data from inriver REST API and regenerate a JAMSTACK site  https://www.netlify.com/products/build/
 5. Showcase how inriver CDN feature for images can be used to deliver optimized images for websites and e-commerce.
